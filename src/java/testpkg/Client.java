@@ -58,4 +58,19 @@ public class Client implements Serializable {
             }
         }
     }
+    public void cancel (ActionEvent ev)
+    {
+        FacesContext.getCurrentInstance().renderResponse();
+    }
+    public void addClient (ActionEvent ev)
+    {
+        Client client = new Client(fname,lname,mail);
+        client.setDiscount(discount);
+        ClientList list =(ClientList) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("clientlist");
+        if(list != null) list.getClientList().add(client);    
+    }
+    public int[] getDiscounts()
+    {
+        return new int[] {0,5,10,15};
+    }
 }

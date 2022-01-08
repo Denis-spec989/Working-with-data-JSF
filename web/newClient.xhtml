@@ -21,6 +21,7 @@
             
             <h:outputLabel value="discount %"/> 
             <h:selectOneMenu value="#{client.discount}" >
+                <f:selectItems value="#{client.discounts}"/>
             </h:selectOneMenu>
         </h:panelGrid> 
         <h:commandButton action="clientList?faces-redirect=true" value="Add"/> 

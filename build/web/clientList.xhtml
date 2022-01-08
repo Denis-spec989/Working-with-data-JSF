@@ -9,11 +9,23 @@
     <h:body>
         <h:form>
             <h:dataTable value="#{clientlist.clientList}" var="elem">   
+                <h:column> <f:facet name="header">id</f:facet>
+                    #{elem.id}          
+                    </h:column>
+                <h:column> <f:facet name="header">First name</f:facet>
+                    #{elem.fname}          
+                    </h:column>
+                 <h:column> <f:facet name="header">Last name</f:facet>
+                    #{elem.lname}          
+                    </h:column>
+                <h:column> <f:facet name="header">mail</f:facet>
+                    #{elem.mail}          
+                    </h:column>
+                <h:column> <f:facet name="header">Discount %</f:facet>
+                    #{elem.discount}          
+                    </h:column>      
             </h:dataTable>
-            <h:column >
-             <f:facet name="header">id</f:facet> 
-                 #{elem.id}   
-            </h:column>
+            
             <h:outputLabel value="id"/> 
             <h:inputText  value="#{clientlist.currentId}"/>
             <h:commandButton action="#{clientlist.editClient}" value="Edit" />  
