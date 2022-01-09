@@ -20,11 +20,11 @@ public class ClientList implements Serializable{
     
     static{
         clientList=new LinkedList<>();
-        clientList.add(new Client("Bob","Marinh","fdf@ghdg22"));
-        clientList.add(new Client("Tom","Brinh" ,"fdf@ghdg43"));
-        clientList.add(new Client("Ann","Detinh","fdf@ghdg67"));
-        clientList.add(new Client("Lom","Ghyinh","fdf@ghdg88"));
-        clientList.add(new Client("Jon","Noilnh","fdf@ghdg17"));
+        clientList.add(new Client("Bob","Marinh","fdf@ghdg22.com"));
+        clientList.add(new Client("Tom","Brinh" ,"fdf@ghdg43.com"));
+        clientList.add(new Client("Ann","Detinh","fdf@ghdg67.com"));
+        clientList.add(new Client("Lom","Ghyinh","fdf@ghdg88.com"));
+        clientList.add(new Client("Jon","Noilnh","fdf@ghdg17.com"));
     }
     public List<Client> getClientList() { return clientList; }
 

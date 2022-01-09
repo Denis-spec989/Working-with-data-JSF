@@ -10,7 +10,7 @@
       <h:form> 
         <h:message for="clientForm" style="color:red;" /> 
         <h:panelGrid columns="2" id="clientForm"> 
-            <h:outputLabel value="firs name"/> 
+            <h:outputLabel value="first name"/> 
             <h:inputText id="fname" value="#{client.fname}" required="true"/>
             
             <h:outputLabel value="last name"/> 
@@ -24,9 +24,11 @@
                 <f:selectItems value="#{client.discounts}" />
             </h:selectOneMenu>
         </h:panelGrid> 
-        <h:commandButton action="clientList?faces-redirect=true" value="Save"/> 
+        <h:commandButton action="clientList?faces-redirect=true" value="Save"
+                         actionListener="#{client.saveClient}"/> 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <h:commandButton action="clientList?faces-redirect=true" value="Cancel"/>
+        <h:commandButton action="clientList?faces-redirect=true" value="Cancel"
+                         actionListener="#{client.cancel}" immediate="true"/>
       </h:form>
     </h:body>
 </html>
